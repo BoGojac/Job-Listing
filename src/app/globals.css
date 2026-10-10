@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfaf7;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-text-color: #152943; 
+  --tracking-1: 0em;
+  --tracking-2: 0.025em;
+  --tracking-3: 0.05em;
+  --tracking-4: 0.1em;
+  --tracking-revers-2: -0.025em;
+  --tracking-revers-3: -0.05em;
+  --tracking-revers-4: -0.1em;
+}
+
+
+body {
+  background: var(--background);
+}

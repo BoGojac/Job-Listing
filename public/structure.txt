@@ -1,0 +1,88 @@
+src/
+├── app/
+│   ├── about/
+│   │      └── page.tsx
+│   │ 
+│   ├── jobs/
+│   │     └── page.tsx
+│   │   
+│   │
+│   ├── (auth)/
+│   │   ├── login/
+│   │   │   └── page.tsx
+│   │   ├── register/
+│   │   │   └── page.tsx
+│   │   └── forgot-password/
+│   │       └── page.tsx
+│   │
+│   ├── (dashboard)/
+│   │   ├── admin/
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── users/
+│   │   │   │   └── page.tsx
+│   │   │   └── settings/
+│   │   │       └── page.tsx
+│   │   │
+│   │   ├── employer/
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx
+│   │   │   └── tasks/
+│   │   │       └── page.tsx
+│   │   ├── staff/
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx
+│   │   │   └── tasks/
+│   │   │       └── page.tsx
+│   │   │
+│   │   └── applicant/
+│   │       ├── layout.tsx
+│   │       ├── page.tsx
+│   │       ├── profile/
+│   │       │   └── page.tsx
+│   │       └── orders/
+│   │           └── page.tsx
+│   │
+│   ├── layout.tsx
+│   ├── globals.css
+│   ├── page.tsx
+│   └── not-found.tsx
+│
+├── components/
+│   ├── ui/
+│   │   ├── Button.tsx
+│   │   ├── Input.tsx
+│   │   └── Modal.tsx
+│   ├── landing/
+│   │   ├── Navbar.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Features.tsx
+│   │   └── Footer.tsx
+│   └── dashboard/
+│       ├── DashboardShell.tsx
+│       ├── Sidebar.tsx
+│       ├── Topbar.tsx
+│       └── UserMenu.tsx
+│
+├── features/
+│   ├── admin/
+│   │   ├── components/
+│   │   ├── services/
+│   │   └── types.ts
+│   ├── staff/
+│   │   ├── components/
+│   │   └── services/
+│   ├── customer/
+│   │   ├── components/
+│   │   └── services/
+│   └── auth/
+│       ├── components/
+│       └── services/
+│
+├── lib/
+│   ├── auth.ts
+│   ├── permissions.ts
+│   └── api.ts
+│
+└── types/
+    └── user.ts

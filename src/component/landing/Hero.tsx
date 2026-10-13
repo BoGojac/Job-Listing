@@ -16,10 +16,9 @@ function Hero() {
 
           {/* Main heading */}
           <h1 className="text-[clamp(2.5rem,5.5vw,5rem)] font-semibold leading-[1.08] tracking-[-0.055em]">
-            Find work that{" "}
+            Find work that
             <span className="block">
-              <em className="font-serif font-medium text-[#e66f59]">moves</em>{" "}
-              you.
+              <em className="font-serif font-medium text-[#e66f59]">moves</em> you.
             </span>
           </h1>
 

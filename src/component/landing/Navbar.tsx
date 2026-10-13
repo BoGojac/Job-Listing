@@ -59,7 +59,7 @@ function Navbar() {
           </summary>
 
           {/* Styled Menu Dropdown matching main scheme */}
-          <div className="absolute top-15 right-0 w-64 min-h-lvh bg-[#fbfaf7]/75 backdrop-blur-md border border-[#eeeae2]/80 shadow-2xl  p-5 flex flex-col space-y-4 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+          <div className="absolute top-15 right-0 w-64 min-h-full rounded-[5%] bg-[#fbfaf7]/75 backdrop-blur-md border border-[#eeeae2]/80 shadow-2xl  p-5 flex flex-col space-y-4 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
             {/* Mobile Nav Links */}
             <ul className="flex flex-col space-y-3 font-medium">
               <li>

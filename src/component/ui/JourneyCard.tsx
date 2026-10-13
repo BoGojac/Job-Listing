@@ -68,7 +68,7 @@ function JourneyCard({
       </div>
 
       <Link
-        href="/register"
+        href={"/auth/register"}
         className="inline-flex w-fit items-center justify-center gap-2 rounded-md border border-[#d8ddd8] px-4 py-3 text-xs font-bold text-[#152943] transition-colors duration-200 hover:border-[#152943] hover:bg-[#152943] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e3715a]">
         {buttonText}
         <ArrowRight size={15} aria-hidden="true" />

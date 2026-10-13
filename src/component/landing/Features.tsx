@@ -10,10 +10,10 @@ import {
   Users,
 } from "lucide-react";
 import Link from "next/link";
-import type { JourneyStep } from '@/types/types'
-import JourneyCard from "../ui/JourneyCard";
+import type { StepsList } from "@/types/types";
+import StepsCard from "../ui/StepsCard";
 
-const applicantSteps: JourneyStep[] = [
+const applicantSteps: StepsList[] = [
   {
     icon: UserRound,
     title: "Create your profile",
@@ -36,7 +36,7 @@ const applicantSteps: JourneyStep[] = [
   },
 ];
 
-const employerSteps: JourneyStep[] = [
+const employerSteps: StepsList[] = [
   {
     icon: Building2,
     title: "Set up your organisation",
@@ -104,7 +104,7 @@ function Features() {
           </div>
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-7">
-            <JourneyCard
+            <StepsCard
               type="applicant"
               title="Find work that fits you"
               description="Built for people who want their work to mean something."
@@ -112,7 +112,7 @@ function Features() {
               buttonText="Get started"
             />
 
-            <JourneyCard
+            <StepsCard
               type="employer"
               title="Hire with intention"
               description="Built for organisations that care about who joins their team."

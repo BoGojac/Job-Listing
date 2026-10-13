@@ -1,16 +1,15 @@
 import {  ArrowRight } from "lucide-react";
 import Link from "next/link";
-import type { JourneyCardProps } from "@/types/types";
-// import type { JourneyStep } from "@/types/types";
+import type { StepsCardProps } from "@/types/types";
 
 
-function JourneyCard({
+function StepsCard({
   type,
   title,
   description,
   steps,
   buttonText,
-}: JourneyCardProps) {
+}: StepsCardProps) {
   const isApplicant = type === "applicant";
 
   return (
@@ -78,4 +77,4 @@ function JourneyCard({
 }
 
 
-export default JourneyCard;
+export default StepsCard;

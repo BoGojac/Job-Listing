@@ -1,15 +1,15 @@
 import type { LucideIcon } from "lucide-react";
 
-export type JourneyStep = {
+export type StepsList = {
   icon: LucideIcon;
   title: string;
   desc: string;
 };
 
-export type JourneyCardProps = {
+export type StepsCardProps = {
   type: "applicant" | "employer";
   title: string;
   description: string;
-  steps: JourneyStep[];
+  steps: StepsList[];
   buttonText: string;
 };

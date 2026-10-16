@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Sparkles } from "lucide-react";
+import { Filter, Search, Sparkles } from "lucide-react";
+import Input from "@/component/ui/Input";
 import Footer from "@/component/landing/Footer";
-
 const Page = () => {
   return (
     <div className="min-h-screen w-full overflow-x-hidden bg-background text-text-color">
@@ -30,13 +30,13 @@ const Page = () => {
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <h1 className="max-w-3xl text-2xl font-bold leading-tight tracking-revers-3 text-[#152943] sm:text-3xl md:text-4xl">
               Look for your{" "}
-              <em className="font-serif font-medium text-[#eb725d]">
+              <em className="font-serif font-medium text-[#f7ce3c]">
                 opportunities
               </em>
             </h1>
 
             <div className="flex shrink-0 items-end gap-2">
-              <strong className="text-3xl leading-none tracking-revers-3 text-[#e5745d] sm:text-4xl">
+              <strong className="text-3xl leading-none tracking-revers-3 text-[#f7ce3c] sm:text-4xl">
                 05
               </strong>
 
@@ -51,7 +51,66 @@ const Page = () => {
       </section>
 
       <section className="w-full min-h-dvh">
-        <main></main>
+        <main>
+          <div className="w-full flex mx-1 my-2.5 md:w-[70%]">
+            <div className="w-[90%] flex border rounded-lg justify-center border-gray-400 mx-2">
+              <Input
+                type="text"
+                value={""}
+                className="w-full flex"
+                // onChange={(event) => setCategory(event.target.value)}
+                placeholder="Search for Job "
+                icon={Search}
+              />
+            </div>
+            <div className="w-[10%] md:hidden">
+              <Filter className="items-center justify-center align-middle text-[#f7ce3c] mx-0.5 my-2 right-0" />
+            </div>
+          </div>
+
+          <div className="flex">
+            <div className="w-full md:w-[70%]">hello</div>
+            <div className="relative hidden w-[30%] -mt-3.5 items-end-safe justify-end-safe md:block border border-gray-400 rounded-md px-3 py-2.5 mx-1 my-1.5 min-h-dvh">
+              <h1>Filter Jobs</h1>
+              <div>
+                <h2>Job Types</h2>
+                <div className="flex ">
+                  <Input type="checkbox" value="" className="" />
+                  <ul>
+                    <li>marketing</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <h2>Categories</h2>
+                <div className="flex">
+                  <Input type="checkbox" value="" className="" />
+                  <ul>
+                    <li>marketing</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <h2>Job Types</h2>
+                <div className="flex gap-0">
+                  <Input type="checkbox" value="" className="" />
+                  <ul>
+                    <li>marketing</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <h2>Job Types</h2>
+                <div className="flex">
+                  <Input type="checkbox" value="" className="" />
+                  <ul>
+                    <li>marketing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </section>
 
       {/* Footer */}

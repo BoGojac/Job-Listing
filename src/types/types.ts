@@ -14,6 +14,10 @@ export type StepsCardProps = {
   buttonText: string;
 };
 
+export type PageProps = {
+  params: Promise<{ slug: string }>;
+};
+
 export type SelectedFilters = Record<string, string[]>;
 
 export interface FilterPanelProps {

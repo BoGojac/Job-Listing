@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import JobDetailClient from "@/component/dashbaord/JobDeatilClient";
 import { getJobBySlug, jobs } from "@/types/jobData";
+import { PageProps } from "@/types/types";
 
 export function generateStaticParams() {
   return jobs.map((job) => ({
@@ -9,9 +10,6 @@ export function generateStaticParams() {
   }));
 }
 
-type PageProps = {
-  params: Promise<{ slug: string }>;
-};
 
 export default function JobDetailPage({ params }: PageProps) {
   return (

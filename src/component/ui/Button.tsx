@@ -1,40 +1,29 @@
-'use client'
-import { LucideIcon } from 'lucide-react';
-import React from 'react'
+"use client";
 
-interface  BaseButtonProps
-{
-    className: string;
-    onClick(): void;
+import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { LucideIcon } from "lucide-react";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children?: ReactNode;
+  title?: string;
+  icon?: LucideIcon;
 }
 
-interface TextButton extends BaseButtonProps
-{
-    title: string;
-    icon?: LucideIcon;
-}
-
-interface IconButton extends BaseButtonProps
-{
-    title?: never;
-    icon: LucideIcon;
-}
-
-type ButtonProp = TextButton | IconButton;
-function Button ({title, className, onClick, icon:Icon }:ButtonProp ) {
+export default function Button({
+  type = "button",
+  title,
+  children,
+  className = "",
+  icon: Icon,
+  ...buttonProps
+}: ButtonProps) {
   return (
-    <div>
-      <button onClick={onClick} className={className}>
-        {Icon && (
-          <span className="icon-wrapper">
-            <Icon className="w-5 h-5" />
-          </span>
-              )}
-              
-        {title && <span>{title}</span>}
-      </button>
-    </div>
+    <button
+      type={type}
+      className={`inline-flex items-center justify-center gap-2 rounded-md bg-[#152943] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#294362] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7eaa8b] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
+      {...buttonProps}>
+      {Icon && <Icon size={18} aria-hidden="true" />}
+      {title ?? children}
+    </button>
   );
 }
-
-export default Button

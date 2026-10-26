@@ -13,3 +13,11 @@ export type StepsCardProps = {
   steps: StepsList[];
   buttonText: string;
 };
+
+export type SelectedFilters = Record<string, string[]>;
+
+export interface FilterPanelProps {
+  selectedFilters: SelectedFilters;
+  onFilterChange: (group: string, option: string) => void;
+}
+

@@ -1,38 +1,23 @@
-import { LucideIcon } from "lucide-react";
-import React from "react";
+"use client";
 
-interface InputField {
-  type: string;
-  value: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  className: string;
-  placeholder?: string;
-  icon?: LucideIcon;
+import type { InputHTMLAttributes } from "react";
+
+interface InputField extends InputHTMLAttributes<HTMLInputElement> {
+  className?: string;
 }
-const Input = ({
-  type,
-  value,
-  onChange,
+
+export default function Input({
+  type = "text",
   className = "",
-  placeholder,
-  icon: Icon,
-}: InputField) => {
+  ...inputProps
+}: InputField) {
   return (
     <div className="flex w-full items-center gap-2 px-3">
       <input
         type={type}
-        value={value}
-        onChange={onChange}
-        className={`min-w-0 flex-1 bg-transparent py-2.5 text-sm outline-none ${className}`}
-        placeholder={placeholder}
+        className={`min-w-0 flex-1 rounded-md border border-[#dfe4df] bg-white px-3 py-2.5 text-sm text-[#152943] outline-none transition placeholder:text-[#9aa3ab] className=" focus-within:border-[#e4b92d] focus-within:ring-2 focus-within:ring-[#f7ce3c]/20"focus:ring-2 focus:ring-[#eaf5ec] disabled:cursor-not-allowed disabled:opacity-60 ${className}`}
+        {...inputProps}
       />
-      {Icon && (
-        <Icon size={20} className="shrink-0 text-gray-500" aria-hidden="true" />
-      )}
     </div>
   );
-};
-
-export default Input;
-
-
+}

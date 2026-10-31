@@ -15,8 +15,8 @@ export default function JobDetailPage({ params }: PageProps) {
   return (
     <Suspense
       fallback={
-        <main className="min-h-screen bg-white px-6 py-12">
-          <p className="text-sm text-[#52616a]">Loading opportunity...</p>
+        <main className="min-h-screen bg-[#fbfaf7] px-6 py-12">
+          <p className="text-sm text-[#14243b]">Loading opportunity...</p>
         </main>
       }>
       <JobDetailContent params={params} />

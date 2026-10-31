@@ -1,5 +1,5 @@
 import { FilterPanelProps } from "@/types/types";
-
+// import Input from "./Input";
 
 const filterGroups = [
   {
@@ -33,11 +33,11 @@ const FilterPanel = ({ selectedFilters, onFilterChange }: FilterPanelProps) =>
             {group.title}
           </legend>
 
-          <div className="grid max-h-40 grid-cols-1 gap-2 overflow-y-auto overscroll-contain pr-2 sm:grid-cols-2 md:grid-cols-1">
+          <div className="grid max-h-40  grid-cols-1 gap-2 overflow-y-auto overscroll-contain pr-2 sm:grid-cols-2 md:grid-cols-1">
             {group.options.map((option) => (
               <label
                 key={option}
-                className="flex min-h-8 cursor-pointer items-center gap-3 rounded-md text-sm text-[#656565] transition-colors hover:text-[#152943]">
+                className="flex min-h-8 gap-3 cursor-pointer items-center rounded-md text-sm text-[#656565] transition-colors hover:text-[#152943]">
                 <input
                   type="checkbox"
                   name={group.title}
